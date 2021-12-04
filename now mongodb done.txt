@@ -1,0 +1,402 @@
+C:\Users\uday\Desktop\mongodb-win32-x86_64-windows-4.4.6\bin>mongo "mongodb+srv://cluster0.ewugi.mongodb.net/myFirstDatabase" --username CUDAYKUMAR
+MongoDB shell version v4.4.6
+Enter password:
+connecting to: mongodb://cluster0-shard-00-00.ewugi.mongodb.net:27017,cluster0-shard-00-01.ewugi.mongodb.net:27017,cluster0-shard-00-02.ewugi.mongodb.net:27017/myFirstDatabase?authSource=admin&compressors=disabled&gssapiServiceName=mongodb&replicaSet=atlas-ausze5-shard-0&ssl=true
+Implicit session: session { "id" : UUID("f9fb4756-e4ba-43bc-ba07-73c98253d279") }
+MongoDB server version: 4.4.10
+MongoDB Enterprise atlas-ausze5-shard-0:PRIMARY> db test
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:3
+MongoDB Enterprise atlas-ausze5-shard-0:PRIMARY> use addskill
+switched to db addskill
+MongoDB Enterprise atlas-ausze5-shard-0:PRIMARY> db.createCollection('names')
+{
+        "ok" : 1,
+        "$clusterTime" : {
+                "clusterTime" : Timestamp(1637088093, 13),
+                "signature" : {
+                        "hash" : BinData(0,"gCZBnA89YVgIL3v0D/n9lNz8Q4E="),
+                        "keyId" : NumberLong("6972053762017853441")
+                }
+        },
+        "operationTime" : Timestamp(1637088093, 13)
+}
+MongoDB Enterprise atlas-ausze5-shard-0:PRIMARY> db.createCollection('meals')
+{
+        "ok" : 1,
+        "$clusterTime" : {
+                "clusterTime" : Timestamp(1637088118, 652),
+                "signature" : {
+                        "hash" : BinData(0,"l2ONZZvIVbrEXwxImqD3VhoNQhk="),
+                        "keyId" : NumberLong("6972053762017853441")
+                }
+        },
+        "operationTime" : Timestamp(1637088118, 652)
+}
+MongoDB Enterprise atlas-ausze5-shard-0:PRIMARY> db.names.insertMany[{
+... "firstName":"Bhavesh",
+... "lastName":"Sharma",
+... "password":"ABNCxTY",
+... "email":"bhavesh@gmail.com",
+... "calories_per_day":1800,
+... "username":"bhaveshs"
+... },
+... {
+... "firstName":"Pavan",
+... "lastName":"Varma",
+... "password":"ABNCxTY",
+... "email":"pavan@gmail.com",
+... "calories_per_day":1200,
+... "username":"pavanv"
+... },
+... {
+... "firstName":"Suraj",
+... "lastName":"Raj",
+... "password":"ABNCxTY",
+... "email":"suraj@gmail.com",
+... "calories_per_day":2400,
+... "username":"surajr"
+... },
+... {
+... "firstName":"karthik",
+... "lastName":"nair",
+... "password":"ABNCxTY",
+... "email":"karthik@gmail.com",
+... "calories_per_day":1500,
+... "username":"nairk"
+... },
+... {
+... "firstName":"somesh",
+... "lastName":"patel",
+... "password":"ABNCxTY",
+... "email":"somesh@gmail.com",
+... "calories_per_day":2000,
+... "username":"spatel"
+... }])
+uncaught exception: SyntaxError: unexpected token: ')' :
+@(shell):40:2
+MongoDB Enterprise atlas-ausze5-shard-0:PRIMARY> db.meals.insertMany([{
+... "datetime": new Date(),
+... "food_name":"pasta",
+... "calorie":300,
+... "description":"Red Sauce Pasta",
+... "_id":"01",
+... "username": "bhaveshs"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"dosa",
+... "calorie":300,
+... "description":"cheeseey",
+... "_id":"02",
+... "username": "bhaveshs"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"pizza",
+... "calorie":300,
+... "description":"chruncheey",
+... "_id":"03",
+... "username": "bhaveshs"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"macorini",
+... "calorie":300,
+... "description":"spicy",
+... "_id":"04",
+... "username": "bhaveshs"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"sandwich",
+... "calorie":300,
+... "description":"maayo",
+... "_id":"05",
+... "username": "bhaveshs"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"chips",
+... "calorie":300,
+... "description":"salty",
+... "_id":"06",
+... "username": "bhaveshs"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"pasta",
+... "calorie":300,
+... "description":"Red Sauce Pasta",
+... "_id":"07",
+... "username": "pavanv"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"burger",
+... "calorie":200,
+... "description":"cheeseey",
+... "_id":"08",
+... "username": "pavanv"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"pizza",
+... "calorie":200,
+... "description":"chruncheey",
+... "_id":"09",
+... "username": "pavanv"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"macorini",
+... "calorie":200,
+... "description":"spicy",
+... "_id":"10",
+... "username": "pavanv"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"sandwich",
+... "calorie":200,
+... "description":"maayo",
+... "_id":"11",
+... "username": "pavanv"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"chips",
+... "calorie":100,
+... "description":"salty",
+... "_id":"12",
+... "username": "pavanv"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"pasta",
+... "calorie":400,
+... "description":"Red Sauce Pasta",
+... "_id":"13",
+... "username": "surajr"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"burger",
+... "calorie":500,
+... "description":"cheeseey",
+... "_id":"14",
+... "username": "surajr"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"pizza",
+... "calorie":300,
+... "description":"chruncheey",
+... "_id":"15",
+... "username": "surajr"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"macorini",
+... "calorie":300,
+... "description":"spicy",
+... "_id":"16",
+... "username": "surajr"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"sandwich",
+... "calorie":500,
+... "description":"maayo",
+... "_id":"17",
+... "username": "surajr"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"chips",
+... "calorie":400,
+... "description":"salty",
+... "_id":"18",
+... "username": "surajr"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"pasta",
+... "calorie":300,
+... "description":"Red Sauce Pasta",
+... "_id":"19",
+... "username": "nairk"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"burger",
+... "calorie":200,
+... "description":"cheeseey",
+... "_id":"20",
+... "username": "nairk"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"pizza",
+... "calorie":300,
+... "description":"chruncheey",
+... "_id":"21",
+... "username": "nairk"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"macorini",
+... "calorie":200,
+... "description":"spicy",
+... "_id":"22",
+... "username": "nairk"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"sandwich",
+... "calorie":250,
+... "description":"maayo",
+... "_id":"23",
+... "username": "nairk"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"chips",
+... "calorie":250,
+... "description":"salty",
+... "_id":"24",
+... "username": "nairk"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"pasta",
+... "calorie":300,
+... "description":"Red Sauce Pasta",
+... "_id":"25",
+... "username": "spatel"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"burger",
+... "calorie":200,
+... "description":"cheeseey",
+... "_id":"26",
+... "username": "spatel"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"pizza",
+... "calorie":300,
+... "description":"chruncheey",
+... "_id":"27",
+... "username": "spatel"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"macorini",
+... "calorie":500,
+... "description":"spicy",
+... "_id":"28",
+... "username": "spatel"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"sandwich",
+... "calorie":200,
+... "description":"maayo",
+... "_id":"29",
+... "username": "spatel"
+... },
+... {
+... "datetime": new Date(),
+... "food_name":"chips",
+... "calorie":500,
+... "description":"salty",
+... "_id":"32",
+... "username": "spatel"
+... }])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                "01",
+                "02",
+                "03",
+                "04",
+                "05",
+                "06",
+                "07",
+                "08",
+                "09",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                "18",
+                "19",
+                "20",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25",
+                "26",
+                "27",
+                "28",
+                "29",
+                "32"
+        ]
+}
+MongoDB Enterprise atlas-ausze5-shard-0:PRIMARY> db.names.update({
+... "firstName":"ramesh",
+... "lastName":"patel",
+... "password":"ABNCxTY",
+... "email":"rames@gmail.com",
+... "calories_per_day":2000,
+... "username":"rameshp"},
+... {$setOnInsert:{"username":"rameshp"}},{upsert:true})
+WriteResult({
+        "nMatched" : 0,
+        "nUpserted" : 1,
+        "nModified" : 0,
+        "_id" : ObjectId("6193fc93f20728111af25d77")
+})
+MongoDB Enterprise atlas-ausze5-shard-0:PRIMARY> db.names.deleteOne({"username":"bhaveshs"})
+{ "acknowledged" : true, "deletedCount" : 0 }
+MongoDB Enterprise atlas-ausze5-shard-0:PRIMARY> db.names.update({“username”:”rameshp”},{$set:{“calories_per_day”:2500, ”password”:
+... “ABCedf”}})
+uncaught exception: SyntaxError: illegal character :
+@(shell):1:17
+MongoDB Enterprise atlas-ausze5-shard-0:PRIMARY> db.meals.insert({
+... "datetime": new Date(),
+... "food_name":"dosa",
+... "calorie":300,
+... "description":"cheeseey",
+... "_id":"31",
+... "username": "bhaveshs"
+... })
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise atlas-ausze5-shard-0:PRIMARY> db.meals.deleteOne({"_id":"31"})
+{ "acknowledged" : true, "deletedCount" : 1 }
+MongoDB Enterprise atlas-ausze5-shard-0:PRIMARY> db.meals.deleteMany({"username":"pavanv"})
+{ "acknowledged" : true, "deletedCount" : 6 }
+MongoDB Enterprise atlas-ausze5-shard-0:PRIMARY> db.meals.find({"username":"pavanv"})
+MongoDB Enterprise atlas-ausze5-shard-0:PRIMARY> db.meals.find({"username":"surajr"})
+{ "_id" : "13", "datetime" : ISODate("2021-11-16T18:45:52.444Z"), "food_name" : "pasta", "calorie" : 400, "description" : "Red Sauce Pasta", "username" : "surajr" }
+{ "_id" : "14", "datetime" : ISODate("2021-11-16T18:45:52.444Z"), "food_name" : "burger", "calorie" : 500, "description" : "cheeseey", "username" : "surajr" }
+{ "_id" : "15", "datetime" : ISODate("2021-11-16T18:45:52.444Z"), "food_name" : "pizza", "calorie" : 300, "description" : "chruncheey", "username" : "surajr" }
+{ "_id" : "16", "datetime" : ISODate("2021-11-16T18:45:52.444Z"), "food_name" : "macorini", "calorie" : 300, "description" : "spicy", "username" : "surajr" }
+{ "_id" : "17", "datetime" : ISODate("2021-11-16T18:45:52.444Z"), "food_name" : "sandwich", "calorie" : 500, "description" : "maayo", "username" : "surajr" }
+{ "_id" : "18", "datetime" : ISODate("2021-11-16T18:45:52.444Z"), "food_name" : "chips", "calorie" : 400, "description" : "salty", "username" : "surajr" }
+MongoDB Enterprise atlas-ausze5-shard-0:PRIMARY> db.meals.find({"username":"surajr"},{"datetime": 2021-07-09})
+{ "_id" : "13", "datetime" : ISODate("2021-11-16T18:45:52.444Z") }
+{ "_id" : "14", "datetime" : ISODate("2021-11-16T18:45:52.444Z") }
+{ "_id" : "15", "datetime" : ISODate("2021-11-16T18:45:52.444Z") }
+{ "_id" : "16", "datetime" : ISODate("2021-11-16T18:45:52.444Z") }
+{ "_id" : "17", "datetime" : ISODate("2021-11-16T18:45:52.444Z") }
+{ "_id" : "18", "datetime" : ISODate("2021-11-16T18:45:52.444Z") }
+MongoDB Enterprise atlas-ausze5-shard-0:PRIMARY>
+
